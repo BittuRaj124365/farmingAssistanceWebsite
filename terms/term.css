@@ -1,0 +1,22 @@
+/* License and Agreement Section */
+#termsSection {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+}
+
+.terms-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.terms-container p {
+    margin: 10px 0;
+    line-height: 1.6;
+}

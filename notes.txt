@@ -1,0 +1,47 @@
+** Green Gobbler Pesticide - Key Points</h3>
+    
+                    -🌱 <b>Natural & Organic</b>– Made from <b>corn</b> <b>safe</b> for the environment.  
+        <br>
+                    - <b>🔥 Strong Formula</b> – Has <b>20% vinegar</b> kills weeds <b>fast</b>  
+        <br>
+                    - <b>⚡ Quick Action</b> – Works in <b>less than 24 hours</b>  
+        <br>
+                    - <b>📍 Use Anywhere</b> – Good for <b>driveways, gardens, and farms</b> 
+        <br> 
+                    - <b>🛠️ Ready to Use</b> – No <b>mixing needed</b> just spray.  
+        <br>
+                    - <b>⚠️ Be Careful</b> – Avoid <b>touching skin</b> has strong vinegar smell.
+        <br>
+                    - <b>🚫 Kills All Plants</b> – Use <b>away from good plants</b>  
+                    This is <b>easy to use</b> and <b>&nbsp;&nbsp;eco-friendly</b> 🌿
+
+weather api==42f68167ce024f83b15154419251403
+const apiKey = "42f68167ce024f83b15154419251403"; // Ensure ONLY the key is here
+api key=="AIzaSyBVz1bOv7N14acM82qUkswEXgzxdh_6ulA"
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
+
+
+
+
+donate button
+
+
+<div class="donateDiv"> 
+                <a href="#" onclick="openPopup()">Donate Us&nbsp;<i class="fa-solid fa-money-check-dollar"></i></a>
+        </div>
+
+
+        <!-- Donation Pop-up Form -->
+    <div id="donationPopup" class="overlay">
+        <div class="popup">
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <h2>Donate Now</h2>
+            <form>
+                <input type="text" placeholder="Enter Your name" required>
+                <input type="text" placeholder="Mobile No. +91" required>
+                <input type="text" placeholder="UPI ID, xYz@.axl" required>
+                <input type="text" placeholder="₹ Enter Amount" required>
+                <button type="submit">Proceed</button>
+            </form>
+        </div>
+    </div>

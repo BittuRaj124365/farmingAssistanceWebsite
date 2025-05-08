@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agriNova--farmingAssistance</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Link to License and Agreement CSS -->
+<link rel="stylesheet" href="terms/term.css">
+    <link rel="stylesheet" href="feedback/feed.css">
+    <link rel="stylesheet" href="Weather/weather.css" />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <div class="headerNav">
+        <div id="home"></div>
+
+        <div class="navPallet">
+            <a href="#home" style="color: rgb(255, 255, 255);">Home&nbsp;<i class="fa-solid fa-house"></i></a>
+            <a href="#schemes">Scheme&nbsp;<i class="fa-solid fa-bullhorn"></i></a>
+            <a href="#blogs">Blog&nbsp;<i class="fa-solid fa-blog"></i></a>
+            <a href="#about">About&nbsp;<i class="fa-solid fa-circle-info"></i></a>
+        </div>
+</div>
+
+</div>
+    <div class="imageBlock"></div>
+
+            <!-- marque text  -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <div class="marquee-content">
+                🚜 <a href="https://pmkisan.gov.in" target="_blank">PM-KISAN</a> | 
+                🌾 <a href="https://www.kcc.org" target="_blank">Kisan Credit Card (KCC)</a> | lll
+                🌱 <a href="https://pmfby.gov.in" target="_blank">Pradhan Mantri Fasal Bima Yojana (PMFBY)</a> | 
+                💧 <a href="https://pmksy.gov.in" target="_blank">PM Krishi Sinchai Yojana</a>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 id="weatherHeading">Search for Weather forecasting</h2>
+<div class="weatherMarketDivs">
+            <div class="weatherMarket">
+                
+                <div class="weatherData">
+                    <input id="weatherInput" type="text" placeholder="Enter Location">
+                    <button id="weatherButton">get Weather</button>
+                    <ul id="weatherList"></ul>
+                </div>
+            </div>
+            
+            <!-- for market price for crops -->
+             <!-- CROP SECTION -->
+    <section id="cropSection" class="crop-section">
+    <h2>🌾 Check Crop Market Info</h2>
+    <input type="text" id="cropInput" placeholder="Enter Crop Name (e.g., Rice)" />
+    <button onclick="searchCrop()">Search</button>
+    <div id="cropDetails" class="crop-details"></div>
+  </section>
+  
+
+        </div>
+                <!-- product 1  -->
+                <H1 id="impTag">Some important PESTICIDES & FERTILIZERS</H1>
+        <div class="product-container">
+            <div class="product-description">
+                <h3>🌱 Green Gobbler Pesticide</h3>
+                <p>
+                    - 🌿 <b>Natural & Organic</b> – Made from <b>corn</b>, safe for the environment.<br>
+                    - 🔥 <b>Strong Formula</b> – Contains <b>20% vinegar</b>, kills weeds <b>fast</b>.<br>
+                    - ⚡ <b>Quick Action</b> – Works in <b>less than 24 hours</b>.<br>
+                    - 📍 <b>Use Anywhere</b> – Ideal for <b>driveways, gardens, and farms</b>.<br>
+                    - 🛠️ <b>Ready to Use</b> – No <b>mixing needed</b>, just spray.<br>
+                    - ⚠️ <b>Be Careful</b> – Avoid <b>touching skin</b>, has a strong vinegar smell.<br>
+                    - 🚫 <b>Kills All Plants</b> – Use <b>away from good plants</b>.<br>
+                    This is <b>easy to use</b> and <b>eco-friendly</b> 🌿.
+                </p>
+            </div>
+            <div class="product-image">
+                <img src="Assets/product2.jpg" alt="Green Gobbler Pesticide">
+            </div>
+        </div>
+
+        <!-- Product 2: SPIC Magnesium Sulphate Fertilizer (Image Left, Text Right) -->
+<div class="product-container reverse">
+    <div class="product-image">
+        <img src="Assets/product8.jpg" alt="SPIC Magnesium Sulphate Fertilizer">
+    </div>
+    <div class="product-description">
+        <h3>🌿 SPIC Magnesium Sulphate fertilizers</h3>
+        <p>
+            - 💪 <b>Essential for Plants</b> – Provides <b>magnesium & sulfur</b> for healthy growth.<br>
+            - ⚡ <b>Boosts Chlorophyll</b> – Enhances <b>photosynthesis</b> for greener leaves.<br>
+            - 🚀 <b>Fast Absorption</b> – Dissolves <b>quickly</b> for immediate effect.<br>
+            - 📍 <b>Use Anywhere</b> – Suitable for <b>farms, gardens, and potted plants</b>.<br>
+            - 🛠️ <b>Easy to Use</b> – Mix with water and apply directly.<br>
+            - 🌱 <b>Eco-Friendly</b> – Safe for plants and the environment.<br>
+        </p>
+    </div>
+</div>
+
+           <!-- Product 3 - Dr. Earth Liquid Solution -->
+           <div class="product-container-2"> 
+            
+            <div class="product-description-2">
+                <h3>🌿 Dr. Earth Liquid Solution fertilizers</h3>
+                <p>
+                    - 🌱 <b>Organic Ingredients</b> – Made from natural <b>fish emulsion</b>.<br>
+                    - 💧 <b>Great for Plants</b> – Perfect for <b>indoor and outdoor plants</b>.<br>
+                    - ⚡ <b>Fast Acting</b> – Provides immediate nutrients to plants.<br>
+                    - 📍 <b>Multipurpose Use</b> – Ideal for <b>vegetables, flowers, and lawns</b>.<br>
+                    - 🛠️ <b>Easy to Use</b> – Just dilute with water and apply.<br>
+                    - 🌍 <b>Eco-Friendly</b> – Safe for plants and the environment.<br>
+                </p>
+            </div>
+            <div class="product-image-2">
+                <img src="Assets/product7.png" alt="Dr. Earth Liquid Solution Fertilizer">
+            </div>
+        </div>
+
+        <!-- for product 3  -->
+        <div class="product-container-3">
+            <div class="product-image-3">
+                <img src="Assets/product5.jpg" alt="Sandbur & Crabgrass Preventer">
+            </div>
+
+            <div class="product-description-3">
+                <h3>🌿 Sandbur & Crabgrass Preventer</h3>
+                <p>
+                    - 🌱 <b>Effective Weed Control</b> – Prevents sandbur and crabgrass growth.<br>
+                    - 🔥 <b>Long-Lasting</b> – Provides season-long control.<br>
+                    - ⚡ <b>Fast-Acting</b> – Starts working immediately upon application.<br>
+                    - 📍 <b>Wide Coverage</b> – Ideal for lawns, gardens, and driveways.<br>
+                    - 🛠️ <b>Easy to Use</b> – Simply apply with a spreader.<br>
+                    - 🌎 <b>Environmentally Safe</b> – Safe for most plants and animals when used as directed.<br>
+                </p>
+            </div>
+        </div>
+        
+               
+             
+
+        <div class="auth-buttons">
+            <button class="btn login-btn" onclick="openPopup('login-popup')">Login&nbsp;&nbsp;<i class="fa-solid fa-user-tie"></i></button>
+            <button class="btn signup-btn" onclick="openPopup('signup-popup')">SignUp&nbsp;&nbsp;<i class="fa-solid fa-user-plus"></i></button>
+        </div>
+    
+        <!-- Login Popup -->
+        <div id="login-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('login-popup')">&times;</span>
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Enter Username" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+    
+        <!-- Signup Popup -->
+        <div id="signup-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('signup-popup')">&times;</span>
+                <h2>Signup</h2>
+                <input type="text" id="signup-username" placeholder="Enter Name" required>
+                <input type="text" id="signup-phone" placeholder="Enter Phone No" required>
+                <input type="text" id="signup-location" placeholder="Enter Local Location" required>
+                <input type="text" id="signup-state" placeholder="Enter State Name" required>
+                <input type="password" id="signup-password" placeholder="Enter Password" required>
+                <button onclick="signup()">Signup</button>
+            </div>
+        </div>
+    <div class="headingContext">
+        <h2 id="headingForContext" style="color:rgb(11, 11, 4)">Resources, supports and insights</h2>
+
+    </div>
+
+    <section id="about"><h2 style="color:aqua"><h2>About</h2></h2><h4>Welcome</h4> to our Farming Assistance Website, a dedicated platform designed to empower farmers with the latest agricultural insights, tools, and real-time weather updates. Our mission is to bridge the gap between traditional farming practices and modern technology, ensuring that farmers can make informed decisions to improve productivity and sustainability.
+
+        We provide expert guidance on crop selection, pest control, irrigation techniques, and soil management to help farmers maximize their yield. With access to government schemes, subsidies, and market trends, our platform ensures that farmers stay updated with opportunities that can benefit them financially.
+        <br>
+        Our user-friendly interface allows farmers to access personalized weather forecasts, smart farming tips, and community support, all in one place. Whether you are a small-scale farmer or a large agricultural business, our goal is to simplify farming challenges with technology-driven solutions.
+        <br>
+        Join us in our journey to revolutionize agriculture and build a prosperous farming community! 🌾🚜</section>
+        <section id="schemes"><h2 style="color:rgb(228, 18, 53)">Schemes 2025</h2> 
+            1️⃣ <b>Prime Minister Dhan-Dhaanya Krishi Yojana</b> 
+               - Targets <b>1.7 crore farmers</b> across <b>100 districts</b> with low agricultural productivity.  
+               - Focuses on <b>boosting crop yield</b> through <b>specialized measures</b> and <b>convergence of existing schemes</b>.  
+<br>            
+            2️⃣ <b>Rural Prosperity and Resilience Programme</b>  
+               - Aims to <b>reduce rural unemployment</b> by promoting <b>investment, technology, and skill development</b>  
+               - Encourages <b>agriculture-based entrepreneurship</b> to curb <b>migration</b> from villages to cities.  
+<br>            
+            3️⃣ <b>Self-Reliance in Pulses Mission</b> 
+               - A <b>six-year plan</b> to increase the production of pulses like <b>Tur (pigeon peas), Urad (black gram), and Masoor (red lentils)</b>  
+               - Ensures <b>procurement at guaranteed prices</b> reducing India's <b>dependence on pulse imports</b> 
+<br>            
+            4️⃣ <b>Kisan Credit Card (KCC) Enhancement</b>  
+               - Loan limit increased to <b>₹5 lakh</b> helping farmers, <b>fishermen, and dairy farmers</b> with easy credit access.  
+               - Supports <b>short-term agricultural needs</b> like <b>seeds, fertilizers, and equipment</b>  
+<br>            
+            5️⃣ <b>Agriculture Infrastructure Fund (AIF)</b>  
+               - Budget allocation increased to <b>₹7,050 crore</b> for <b>building agri-infrastructure</b> like warehouses & cold storage.  
+               - Encourages <b>agri-entrepreneurs, startups, and farmer groups</b> to participate in modernization efforts.  
+<br>            
+            6️⃣ <b>Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</b>  
+                <b>Direct income support** of **₹6,000 per year</b> given in <b>three installments</b> to eligible farmers.  
+               - <b>Total allocation:</b> ₹63,500 crore for 2025-26.  
+<br>            
+            7️⃣ <b>Pradhan Mantri Fasal Bima Yojana (PMFBY)</b>  
+               <b>Crop insurance scheme</b> covering losses from <b>natural disasters, pests, and diseases</b>  
+               - Helps farmers <b>invest in advanced agricultural technologies</b> without financial risk.  
+<br>            
+            8️⃣ <b>Sub-Mission on Agricultural Mechanization (SMAM)</b>  
+               - Offers <b>subsidies</b> on <b>farm machinery</b> like <b>tractors, harvesters, and seeders</b>  
+               - Encourages <b>mechanization</b> to <b>increase productivity and reduce manual labor</b>  
+            
+            ---</section>
+        <br>
+        <section id="blogs"><h2 style="color:brown">Blogs</h2><h3>The Future of Farming: How Technology is Empowering Farmers</h3>  
+            
+            Agriculture is the backbone of our economy, and with the rapid advancements in technology, farming is becoming smarter and more efficient. From weather forecasting to automated irrigation systems, modern tools are helping farmers make better decisions and increase crop productivity.  
+            
+            Our <b>Farming Assistance Website</b> is designed to bridge the gap between traditional farming methods and innovative solutions. We provide real-time weather updates, government scheme information, and expert advice on crop management. By integrating smart farming techniques, farmers can reduce losses and improve their yields.  
+            
+            With access to digital resources, farmers can now plan their harvests, track market trends, and connect with agricultural experts—all in one place. Whether you are a beginner or an experienced farmer, embracing technology can lead to a more sustainable and profitable future. Stay connected with us to transform your farming experience! 🚜🌾</section> 
+        <br>
+
+
+        <div id="chatbot-wrapper"></div>
+        <body>
+            <!-- Your main website content -->
+            <!-- Chatbot placeholder -->
+            <div id="chatbot-wrapper"></div>
+          
+            <!-- Load chatbot -->
+            <script>
+              fetch("Chatbot/chat.html")
+                .then(res => res.text())
+                .then(data => {
+                  document.getElementById("chatbot-wrapper").innerHTML = data;
+                  const script = document.createElement('script');
+                  script.src = "Chatbot/chat.js";
+                  document.body.appendChild(script);
+                  const link = document.createElement('link');
+                  link.rel = "stylesheet";
+                  link.href = "Chatbot/chat.css";
+                  document.head.appendChild(link);
+                })
+                .catch(err => console.error("Error loading chatbot:", err));
+            </script>
+
+<!-- Feedback Button -->
+<button id="openFeedback">Give Feedback</button>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span id="closeFeedback" class="close">&times;</span>
+        <h2>We Value Your Feedback</h2>
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+</div>
+
+            <!-- for licence and terms and conditions -->
+<footer id="termsSection">
+    <div class="terms-container">
+        <h3>License and Agreement</h3>
+        <p>
+            By using this platform, you agree to abide by our feedback submission guidelines and terms of service.
+            Your feedback may be reviewed and utilized for improving our services, but personal details will remain confidential.
+        </p>
+        <p>
+            All content and designs are protected under © 2025 Farming Assistance Project. Unauthorized copying or reproduction is prohibited.
+        </p>
+        <p>
+            For further inquiries regarding usage ri>ghts or permissions, please contact us at <b>+91 23003502044</b> or <b>agroNovaProject124365@gmail.com</b>
+        </p>
+    </div>
+</footer>
+
+
+        <script src="feedback/feed.js"></script>
+</body>
+        <script src="script.js"></script>
+        <script src="CropsData/crops.js" defer></script>
+</body>
+</html>

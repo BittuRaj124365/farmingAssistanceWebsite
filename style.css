@@ -1,0 +1,1027 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html {
+    scroll-behavior:smooth;
+}
+
+/* h1{
+    color:yellow;
+    background-color: red;
+} */
+
+
+/* for marque text  */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #ccd2d8;
+    padding: 10px 0;
+    /* border-top: 2px solid #28a745; */
+    /* border-bottom: 2px solid #28a745; */
+}
+
+.marquee {
+    white-space: nowrap;
+    display: inline-block;
+    animation: scrollText 13s linear infinite;
+}
+
+.marquee-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.marquee-content a:hover {
+    text-decoration: underline;
+}
+
+@keyframes scrollText {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+
+.imageBlock{
+    height:500px;
+    width:100%;
+    background-image: url(Assets/heroImage4.jpg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+    display: flex;
+    /* position: relative; */
+    flex-wrap: wrap;
+    justify-content: center;
+    position: inherit;
+}
+.headerNav{
+    position: fixed;
+    height:70px;
+    width:100%;
+    /* background-color: #6c32159f; */
+    background:linear-gradient(to left, rgb(160, 69,  69),rgb(118, 164, 182));
+
+    /* border:0.2px solid rgb(78, 77, 77); */
+}
+.headerNav .navPallet{
+    /* position:sticky; */
+    display: flex;
+    justify-content: left;
+}
+/* Responsive Design */
+ @media (max-width: 768px) {
+    .navPallet {
+        width: 70%;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navPallet a {
+        margin: 0.5rem 0;
+        font-size: 0.7rem;
+    }
+
+    .image {
+        height: 350px;
+    }
+}
+
+.navPallet{
+    /* border:1px solid black; */
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap; /* Ensures buttons stay within screen */
+    justify-content: center;
+    width: 70%;
+    height: 45px;
+} 
+.navPallet a{
+    font-size: 1rem; /* Set a limit to avoid extreme shrinking */
+    margin: 0.5rem;
+    margin:1rem;
+    position: relative;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: 500;
+}
+.navPallet a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0.01%;
+    height: 3.5px;
+    border-radius: 5px;
+    background: #ff0000;
+    transition: width 0.4s ease-in-out;
+}
+.navPallet a:hover::after {
+    width: 100%;
+}
+
+/* Responsive Design - Only Shrinking */
+@media (max-width: 768px) {
+    .navPallet {
+        width: 80%; /* Shrinks slightly */
+    }
+    .navPallet a {
+        font-size: 0.9rem; /* Reduces text size */
+        margin: 0.8rem;
+    }
+}
+@media (max-width: 480px) {
+    .navPallet {
+        width: 90%; /* Adjusts for smaller screens */
+    }
+    .navPallet a {
+        font-size: 0.8rem; /* Further reduces text size */
+        margin: 0.5rem;
+    }
+}
+@media (max-width:480){
+    .auth-buttons .btn{
+        height:35px;
+        width:100px;
+        flex-direction: column;
+    }
+}
+@media (max-width:330px){
+    .auth-buttons .btn{
+        margin-top:1rem;
+        display: none;
+    }
+}
+@media (max-width:900px){
+    .auth-buttons .btn{
+        margin-top:1.5rem;
+    }
+}
+
+/* Just dont remove this fucking line */
+*/
+/* Just dont remove this fucking line */
+
+.headingContext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Ensures it takes full height of the screen */
+    margin: 0;
+}
+
+#headingForContext {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(11, 11, 4);
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #headingForContext {
+        font-size: 1.5rem; /* Adjusts the font size on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #headingForContext {
+        font-size: 1.2rem; /* Further adjusts the font size on mobile screens */
+    }
+}
+
+
+/* another css for weather for */
+/* Weather Forecast Section */
+.weather-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .weather-section input,
+  .weather-section button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .weather-section button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  .weather-section button:hover {
+    background-color: #45a049;
+  }
+  #weatherResult {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+/* another weateh css for styling    */
+
+
+
+.weather {
+    position: fixed;
+    top: 1rem;
+    right: 3rem;
+    text-align: center;
+}
+.weather a{
+    color:rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: 500;
+    text-decoration: none;
+    
+    /* for hover effect */
+    &:hover{
+        color:rgb(221, 237, 7);
+    }
+
+}
+/* Responsive Design */
+
+    /* weather and market details  */
+
+#weatherHeading{
+    text-align: center;
+    color:brown;
+}
+.weatherMarketDivs{
+    height:auto;
+    width:auto;
+    border-radius: 30px;
+    justify-content: center;
+    display:flex;
+    /* border:2px solid red; */
+}
+.weatherMarket{
+    justify-content: center;
+    height:auto;
+    display: flex;
+    flex-wrap:wrap;
+    height:auto;
+    width:75%;
+    /* border:2px solid rgb(0, 0, 0); */
+    /* margin-top:0.5rem; */
+    display: flex;
+}
+.weatherData input::placeholder{
+    color:rgb(0, 0, 0);
+    font-weight: 550;
+    font-weight: 800;
+}
+.weatherData input{
+    height:50px;
+    border-radius: 10px;
+    background-color: rgb(145, 171, 153);
+}
+.marketData input::placeholder{
+    color:rgb(0, 0, 0);
+    font-weight: 550;
+    font-family:sans-serif;
+}
+.marketData input{
+    height:50px;
+    border-radius: 10px;
+    background-color: rgb(145, 171, 153);
+}
+#weatherButton{
+    height: 40px;
+    width:140px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(18, 182, 15);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left:1rem;
+    font-weight: 550;
+    &:hover{
+        background-color: rgb(31, 178, 168);
+        color:rgb(255, 255, 255);
+        cursor:pointer;
+    }
+}
+
+    /* Weather Display Styling */
+#weatherList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#weatherList li {
+    font-size: 18px;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#weatherList li:hover {
+    transform: scale(1.05);
+    background-color: #e0f7fa;
+}
+
+#weatherList li:nth-child(1) {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    background-color: #e3f2fd;
+}
+
+#weatherList li:nth-child(2) {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff6f00;
+    background-color: #fff3e0;
+}
+
+#weatherList li:nth-child(3) {
+    font-size: 18px;
+    font-weight: 500;
+    color: #0277bd;
+}
+
+#weatherList li:nth-child(4), #weatherList li:nth-child(5) {
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+}
+
+/* market buttons  */
+
+.crop-section {
+    background: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .crop-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2e7d32;
+    font-size: 1.5rem;
+  }
+  
+  .crop-section input,
+  .crop-section button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 15px;
+  }
+  
+  .crop-section button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .crop-section button:hover {
+    background-color: #388e3c;
+  }
+  
+  .crop-card {
+    background-color: #f1f8e9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow-x: auto;
+  }
+  
+  .crop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .crop-card h2 {
+    margin-top: 0;
+    color: #33691e;
+    font-size: 1.3rem;
+  }
+  
+  .crop-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+  
+  .info-item {
+    flex: 1 1 220px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    font-size: 14px;
+  }
+  
+  .info-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .info-item[data-type="season"] {
+    background-color: #fff3e0;
+    border-left: 5px solid #ffb74d;
+  }
+  
+  .info-item[data-type="soil"] {
+    background-color: #e3f2fd;
+    border-left: 5px solid #64b5f6;
+  }
+  
+  .info-item[data-type="water"] {
+    background-color: #ede7f6;
+    border-left: 5px solid #9575cd;
+  }
+  
+  .info-item[data-type="climate"] {
+    background-color: #fce4ec;
+    border-left: 5px solid #f06292;
+  }
+  
+  .info-item[data-type="pesticides"] {
+    background-color: #e8f5e9;
+    border-left: 5px solid #66bb6a;
+  }
+  
+  .info-item[data-type="yield"] {
+    background-color: #f9fbe7;
+    border-left: 5px solid #dce775;
+  }
+  
+  .info-item strong {
+    color: #2e7d32;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .price-info {
+    margin-top: 15px;
+    background-color: #fdd835;
+    padding: 10px;
+    border-radius: 5px;
+    color: #212121;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-size: 15px;
+  }
+  
+  .price-info:hover {
+    background-color: #fbc02d;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .crop-info {
+      flex-direction: column;
+    }
+    .info-item {
+      width: 100%;
+    }
+  }
+  
+
+/* market buttons  */
+
+
+#impTag{
+    /* align-items: center; */
+    text-align: center;
+}
+
+
+        /* pesticides and fertililzers styles  */
+            /* for image 1  */
+/* Centering the product container */
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 50px auto;
+    gap: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling the description section */
+.product-description {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Description */
+.product-description:hover {
+    background: rgba(46, 125, 50, 0.1); /* Light Green Tint */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Title Styling */
+.product-description h3 {
+    color: #2e7d32;
+    font-size: 22px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+/* Hover Effect for Title */
+.product-description:hover h3 {
+    color: #b80920; /* Change to Orange on Hover */
+}
+
+/* Description Text */
+.product-description p {
+    /* font-size: 16px; */
+    /* line-height: 1.6; */
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Text */
+.product-description:hover p {
+    color: #2e7d32; /* Green on Hover */
+}
+
+/* Styling the image section */
+.product-image {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image img {
+    height: 200px;
+    width: auto;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Image */
+.product-image:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.4); /* Orange Glow */
+}
+
+/* Responsive Design */
+/* Mobile view - Image above the description for both products */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column; /* Stack image above description */
+        text-align: center; /* Center-align the content */
+    }
+
+    /* Reset the order for smaller screens */
+    .product-container img {
+        order: 1; /* Image appears above description */
+    }
+    .product-container .description {
+        order: 2; /* Description appears below image */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-description, .product-image {
+        max-width: 100%;
+    }
+
+    .product-description {
+        text-align: center;
+    }
+}
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between image & text */
+    flex-wrap: wrap; /* Responsive */
+}
+        /* for image 2  */
+/* Default: Image on Right, Description on Left */
+.product-container img {
+    order: 2; /* Image appears second (Right side) */
+}
+.product-container .description {
+    order: 1; /* Description appears first (Left side) */
+}
+
+/* Reverse: Image on Left, Description on Right */
+.reverse img {
+    order: 1; /* Image appears first (Left side) */
+}
+.reverse .description {
+    order: 2; /* Description appears second (Right side) */
+}
+        /* for image 3 */
+
+/* Centering the product container */
+.product-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 50px auto;
+    gap: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling the description section for the second product */
+.product-description-2 {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Description */
+.product-description-2:hover {
+    background: rgba(46, 125, 50, 0.1); /* Light Green Tint */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Title Styling for Description */
+.product-description-2 h3 {
+    color: #2e7d32;
+    font-size: 22px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+/* Hover Effect for Title */
+.product-description-2:hover h3 {
+    color: #b80920; /* Change to Orange on Hover */
+}
+
+/* Description Text */
+.product-description-2 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Text */
+.product-description-2:hover p {
+    color: #2e7d32; /* Green on Hover */
+}
+
+/* Styling the image section for the second product */
+.product-image-2 {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image-2 img {
+    height: 200px;
+    width: auto;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Image */
+.product-image-2:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.4); /* Orange Glow */
+}
+
+/* Mobile view - Image left, description right on large screens */
+@media (max-width: 768px) {
+    .product-container-2 {
+        flex-direction: row; /* Ensure image and description are side by side */
+        text-align: left; /* Align content to left */
+    }
+
+    /* Reset the order for smaller screens */
+    .product-container-2 img {
+        order: 0; /* Image remains on the left */
+    }
+
+    .product-container-2 .product-description-2 {
+        order: 1; /* Description stays on the right */
+    }
+}
+
+/* Final touch for responsiveness */
+@media (max-width: 768px) {
+    .product-container-2 {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .product-description-2, .product-image-2 {
+        max-width: 100%;
+    }
+
+    .product-description-2 {
+        text-align: left;
+    }
+}
+
+.product-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between image & text */
+    flex-wrap: wrap; /* Responsive */
+}
+
+        /* for image 4  */
+/* Centering the product container */
+.product-container-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 50px auto;
+    gap: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling the description section */
+.product-description-3 {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Description */
+.product-description-3:hover {
+    background: rgba(46, 125, 50, 0.1); /* Light Green Tint */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Title Styling */
+.product-description-3 h3 {
+    color: #2e7d32;
+    font-size: 22px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+/* Hover Effect for Title */
+.product-description-3:hover h3 {
+    color: #b80920; /* Change to Orange on Hover */
+}
+
+/* Description Text */
+.product-description-3 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Text */
+.product-description-3:hover p {
+    color: #2e7d32; /* Green on Hover */
+}
+
+/* Styling the image section */
+.product-image-3 {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image-3 img {
+    height: 200px;
+    width: auto;
+    max-width: 350px; /* Ensures the image doesn't grow too large */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Image */
+.product-image-3:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.4); /* Orange Glow */
+}
+
+/* Mobile view - Stack image above the description */
+@media (max-width: 768px) {
+    .product-container-3 {
+        flex-direction: column; /* Stack image above description */
+        text-align: center; /* Center-align the content */
+    }
+
+    /* Reset the order for smaller screens */
+    .product-container-3 .product-image-3 {
+        order: 1; /* Image appears above description */
+    }
+
+    .product-container-3 .product-description-3 {
+        order: 2; /* Description appears below image */
+    }
+}
+
+/* Final touch for responsiveness */
+@media (max-width: 768px) {
+    .product-container-3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-description-3, .product-image-3 {
+        max-width: 100%;
+    }
+
+    .product-description-3 {
+        text-align: center;
+    }
+}
+
+.product-container-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between image & text */
+    flex-wrap: wrap; /* Responsive */
+}
+
+        /* LOGIN/SIGNUP  */
+/* Auth Buttons */
+.auth-buttons {
+    position: fixed;
+    top: 30px;
+    right: 15px;
+    display: flex;
+    gap: 5px;
+}
+.auth-buttons i{
+    margin-left:5px;
+    padding:3px;
+}
+.btn i{
+    height:auto;
+}
+.btn {
+    background-color: #1778ce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-weight:600;
+}
+
+.btn:hover {
+    background-color: #1200b3;
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+section {
+    padding: 50px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Home Section */
+#home {
+    background: #eef7e3; /* Light Green */
+    text-align: center;
+}
+
+#home p {
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+/* Schemes Section */
+#schemes {
+    background: #e3f2fd; /* Light Blue */
+    text-align: left;
+}
+
+#schemes p {
+    color: #1565c0;
+    font-size: 18px;
+}
+
+/* Blogs Section */
+#blogs {
+    background: #af9999; /* White Background */
+    text-align: left;
+}
+
+#blogs h2 {
+    color: #ff9800; /* Orange */
+    font-size: 28px;
+    text-align: center;
+}
+
+#blogs p {
+    color: #444;
+    font-size: 18px;
+}
+
+/* About Us Section */
+#about {
+    background: #f3e5f5; /* Light Purple */
+    text-align: left;
+}
+
+#about h2 {
+    color: #6a1b9a; /* Deep Purple */
+    font-size: 28px;
+}
+
+#about p {
+    color: #555;
+    font-size: 18px;
+}
