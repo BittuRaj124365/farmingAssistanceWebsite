@@ -16,7 +16,7 @@
                     This is <b>easy to use</b> and <b>&nbsp;&nbsp;eco-friendly</b> 🌿
 
 weather api==42f68167ce024f83b15154419251403
-const apiKey = "42f68167ce024f83b15154419251403"; // Ensure ONLY the key is here
+const apiKey = "abittu---->42f68167ce024f83b15154419251403<----xYz"; // Ensure ONLY the key is here
 api key=="AIzaSyBVz1bOv7N14acM82qUkswEXgzxdh_6ulA"
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
 
@@ -44,4 +44,5 @@ donate button
                 <button type="submit">Proceed</button>
             </form>
         </div>
+
     </div>
